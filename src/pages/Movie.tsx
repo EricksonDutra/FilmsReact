@@ -6,7 +6,7 @@ import { Button } from "../components/Button"
 import { ButtonVariants } from "../components/Button/types"
 import { Loading } from "../components/Loading"
 
-import { useWishlist } from "../hooks/Wishlist"
+import { Wishlist } from "../hooks/Wishlist"
 
 import api from "../services/api"
 
@@ -16,7 +16,7 @@ import * as Styles from "../styles/pages/Movie"
 
 export function Movie() {
   const { id } = useParams()
-  const { isMovieInWishlist, handleAddOrRemoveMovieOnWishlist } = useWishlist()
+  const { isMovieInWishlist, handleAddOrRemoveMovieOnWishlist } = Wishlist()
 
   const currentUrl = window.location.href
 

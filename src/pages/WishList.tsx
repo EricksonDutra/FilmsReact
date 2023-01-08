@@ -1,12 +1,12 @@
 import { MovieCard } from "../components/MovieCard"
 
-import { useWishlist } from "../hooks/Wishlist"
+import { Wishlist } from "../hooks/Wishlist"
 
 import * as Styles from "../styles/pages/Wishlist"
 
 export function WishList() {
   const { wishlist, handleAddOrRemoveMovieOnWishlist, isMovieInWishlist } =
-    useWishlist()
+  Wishlist()
 
   return (
     <Styles.Container>

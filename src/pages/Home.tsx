@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { MovieCard } from "../components/MovieCard"
 import { Loading } from "../components/Loading"
 
-import { useWishlist } from "../hooks/Wishlist"
+import { Wishlist } from "../hooks/Wishlist"
 
 import api from "../services/api"
 
@@ -12,7 +12,7 @@ import { ITopTenWeeklyMovies } from "../interface/Home"
 import * as Styles from "../styles/pages/Home"
 
 export function Home() {
-  const { wishlist, handleAddOrRemoveMovieOnWishlist } = useWishlist()
+  const { wishlist, handleAddOrRemoveMovieOnWishlist } = Wishlist()
 
   const [isLoading, setIsLoading] = useState(false)
 

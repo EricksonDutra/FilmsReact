@@ -61,11 +61,11 @@ export function WishlistProvider(props: IWishlistProviderprops): JSX.Element {
   )
 }
 
-export function useWishlist(): IWishlistContextData {
+export function Wishlist(): IWishlistContextData {
   const context = useContext(WishlistContext)
 
   if (!context) {
-    throw new Error("useWishlist must be used within a WishlistProvider")
+    throw new Error("Wishlist must be used within a WishlistProvider")
   }
 
   return context

@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom"
 
 import { Loading } from "../components/Loading"
 import { MovieCard } from "../components/MovieCard"
-import { useWishlist } from "../hooks/Wishlist"
+import { Wishlist } from "../hooks/Wishlist"
 import { IMovieProps } from "../hooks/Wishlist/types"
 
 import api from "../services/api"
@@ -12,7 +12,7 @@ import * as Styles from "../styles/pages/Search"
 
 export function Search() {
   const [keyword] = useSearchParams()
-  const { handleAddOrRemoveMovieOnWishlist, isMovieInWishlist } = useWishlist()
+  const { handleAddOrRemoveMovieOnWishlist, isMovieInWishlist } = Wishlist()
 
   const [isLoading, setIsLoading] = useState(false)
   const [movies, setMovies] = useState<IMovieProps[]>([])
